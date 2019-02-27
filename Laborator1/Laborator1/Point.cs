@@ -21,20 +21,26 @@ namespace Laborator1
         }
         public double X
         {
-            get;
+            get { return x; }
         }
         public double Y
         {
-            get;
+            get { return y; }
         }
         public  void Rotate(double teta)
         {
             //x1 = Rcos(alfa + teta) =R(cos alfta cos teta - sin alfa sin teta)
             //y1 = Rsin(alfa+teta) = R(sin alfa cos teta + cos alfa sin teta)
-            double alfa = Math.Asin(y / x);
+            /*
+             * pi radian .....180
+             *  x   ....  t
+             * */
             double x1, y1;
-          
-
+            teta = (teta*Math.PI) / 180; 
+            x1 = x * Math.Cos(teta) - y * Math.Sin(teta);
+            y1 = y * Math.Cos(teta) + x * Math.Sin(teta);
+            x = x1;
+            y = y1;
         }
 
 
