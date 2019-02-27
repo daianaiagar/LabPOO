@@ -31,6 +31,31 @@ namespace Laborator1
             else
                 Console.WriteLine("Asta nu e triunghi!");
         }
+        public double Perimetru
+        {
+           
+           get
+            {
+                double l1, l2, l3;
+                l1 = Distance(p1, p2);
+                l2 = Distance(p2, p3);
+                l3 = Distance(p1, p3);
+
+                return l1 + l2 + l3;
+            }
+        }
+        public double Arie
+        {
+            get
+            {
+                double l1, l2, l3;
+                l1 = Distance(p1, p2);
+                l2 = Distance(p2, p3);
+                l3 = Distance(p1, p3);
+                double p = (l1 + l2 + l3) / 2;
+                return Math.Sqrt(p * (p - l1) * (p - l2) * (p - l3));
+            }
+        }
 
     }
 }

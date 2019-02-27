@@ -8,6 +8,7 @@ namespace Laborator1
 {
     class Point
     {
+        //Un vector  de numere  care reprezinta bare...ape
         double x, y;
         public Point()
         {
