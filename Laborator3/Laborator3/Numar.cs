@@ -148,5 +148,89 @@ namespace Laborator3
                 return sd;
             }
         }
+        /// <summary>
+        /// returneaza numarul in baza  "baza" ca string.
+        /// </summary>
+        /// <param name="baza">o baza(numar fara semn)</param>
+        /// <returns></returns>
+        public String  ConvertToBase(ulong baza)
+        {
+            string s = "";
+            ulong aux = v;
+            while(aux!=0)
+            {
+                s = aux % baza + s;
+                aux /= baza;
+            }
+            return s;
+        }
+        /// <summary>
+        /// Returneaza numarul in baza 16 ca string.
+        /// </summary>
+        public string Hex
+        {
+            get
+            {
+                string s = "0123456789ABCDEF";
+                string nou = "";
+                ulong aux = v;
+
+                while (aux != 0)
+                {
+                    nou = s[(int)(aux%16)].ToString()+ nou;
+                    aux /= 16;
+                }
+                return nou;
+
+            }
+        }
+        /// <summary>
+        /// Aduna  doua numere de tip Numar.
+        /// </summary>
+        /// <param name="b">al doilea termen din suma </param>
+        /// <returns>un obiect detip Numar </returns>
+        public Numar Add(Numar b)
+        {
+            Numar sum = new Numar(v + b.Value);
+            return sum;
+        }
+        /// <summary>
+        /// Scade   doua numere de tip Numar.
+        /// </summary>
+        /// <param name="b">descazutul </param>
+        /// <returns>un obiect de tip Numar </returns>
+        public Numar Subtract(Numar b)
+        {
+            return new Numar((ulong)Math.Abs((float)(Value - b.Value)));
+
+        }
+        /// <summary>
+        /// Inmulteste  doua  numere de tip Numar.
+        /// </summary>
+        /// <param name="b"> al doilea factor </param>
+        /// <returns>un obiect de tip Numar </returns>
+        public Numar Multiply(Numar b)
+        {
+            return new Numar(Value * b.Value);
+        }
+        /// <summary>
+        /// Returneaza  restul a doua numere de tip Numar 
+        /// </summary>
+        /// <param name="b"> deimpartitul </param>
+        /// <returns>un obiect de tip Numar </returns>
+        public Numar Mod(Numar b)
+        {
+            return new Numar(Value % b.Value);
+        }
+        /// <summary>
+        /// Returneaza   catul intreg  a doua numere de tip Numar 
+        /// </summary>
+        /// <param name="b"> deimpartitul </param>
+        /// <returns>un obiect de tip Numar </returns>
+        public Numar Div(Numar b)
+        {
+            return new Numar(Value / b.Value);
+        }
+       
     }
 }
