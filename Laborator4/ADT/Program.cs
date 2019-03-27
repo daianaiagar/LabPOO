@@ -35,6 +35,7 @@ namespace ADT
 
             int value;
             bool result = st.TryPeek(out  value);
+            Console.WriteLine(value);
 
 
            

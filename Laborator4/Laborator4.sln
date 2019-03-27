@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Complex", "Laborator4\Compl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADT", "ADT\ADT.csproj", "{18C57D85-51A1-4478-ACED-19B2394B3380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coada", "Queque\Coada.csproj", "{58EEC5D3-243D-4D6D-9929-A197D418D161}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18C57D85-51A1-4478-ACED-19B2394B3380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18C57D85-51A1-4478-ACED-19B2394B3380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18C57D85-51A1-4478-ACED-19B2394B3380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58EEC5D3-243D-4D6D-9929-A197D418D161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58EEC5D3-243D-4D6D-9929-A197D418D161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58EEC5D3-243D-4D6D-9929-A197D418D161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58EEC5D3-243D-4D6D-9929-A197D418D161}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

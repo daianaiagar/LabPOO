@@ -71,7 +71,8 @@ namespace ADT
         private  void resize(int size)
         {
             int[] v2 = new int[size];
-            for (int i = 0; i < v.Length; i++)
+            int no = Math.Min(size, v.Length);
+            for (int i = 0; i<no; i++)
                 v2[i] = v[i];
             v = v2;
         }
