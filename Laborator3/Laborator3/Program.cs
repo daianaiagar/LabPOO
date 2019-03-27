@@ -10,11 +10,13 @@ namespace Laborator3
     {
         static void Main()
         {
-            Numar n = new Numar(123456743232323);
-            Console.WriteLine("Suma cifrelor numarului {0} este {1}",n.Value,n.SumaCifre());
-            Console.WriteLine("Numarul {0} {1} este  prim",n.Value,n.EstePrim()?"":"Nu ");
-            Console.WriteLine("Numarul {0} are {1} divizori",n.Value,n.NumarDivizoriV2);
+            Numar n = new Numar(435345345);
+            Console.WriteLine(n.Hex);
+            Console.WriteLine(n.ConvertToBase(2));
+            Console.WriteLine(n.Add(new Numar(34)).Value);
+            Console.WriteLine(n.Div(new Numar(10)).Value);
             Console.ReadKey();
+           
             return;
         }
     }
