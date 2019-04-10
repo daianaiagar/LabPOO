@@ -12,16 +12,33 @@ namespace Lab7
         {
           
             Console.Title = "Laborator7";
-            MyArray mA = new MyArray(10);
-            for (int i = 0; i <10; i++)
-                mA.Add(i * i);
-            mA[3] += 5;
+            MyArray mA = new MyArray(5);
+            Random rnd = new Random();
+            for (int i = 0; i < 20; i++)
+                mA.Add(rnd.Next() % 100);
+              
             Console.WriteLine(mA);
-            //toate aparitiile
-           // mA.Remove(14);
+            mA.BubbleSort(MyArray.CompareBySum);
+            Console.WriteLine(mA);
+         
+        
 
-                        
            
+
+        
+        
+
+           
+            //muta toate elementele din vector cu o pozitie la stanga.
+            //mA.RotateLeft();
+
+
+
+
+
+
+
+
 
         }
     }
