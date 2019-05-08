@@ -12,18 +12,18 @@ namespace ConsoleApp1
         private int width;
         private int height;
         private List<BouncingBall> balls = new List<BouncingBall>();
-
-        internal void Step()
+        private void  Move()
         {
-            for(int i=0;i<balls.Count;i++)
+            for (int i = 0; i < balls.Count; i++)
             {
                 balls[i].X += balls[i].Speedx;
                 balls[i].Y += balls[i].Speedy;
 
             }
-            //verific daca vreo bila a ajuns la blackhole
-            //in caz afirmativ, o eliminam si blackhole creste.
-            foreach(var item in balls)
+        }
+        private void CheckforHoleCollision()
+        {
+            foreach (var item in balls)
             {
                 if (item.CheckCollision(bH))
                 {
@@ -31,6 +31,13 @@ namespace ConsoleApp1
                     balls.Remove(item);
                 }
             }
+        }
+        internal void Step()
+        {
+            Move();
+            //verific daca vreo bila a ajuns la blackhole
+            //in caz afirmativ, o eliminam si blackhole creste.
+          
            // Console.WriteLine("Hello");
             //verific daca sunt coliziuni intre bile. 
 
@@ -39,6 +46,9 @@ namespace ConsoleApp1
                     if(balls[i].Exists&&balls[j].Exists)
                     {
                         if(balls[i].CheckCollision(balls[j]))
+                        {
+                           
+                        }
                             
                     }
 
