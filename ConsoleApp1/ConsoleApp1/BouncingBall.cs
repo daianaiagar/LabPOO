@@ -36,13 +36,28 @@ namespace ConsoleApp1
             return sb.ToString();
 
         }
-        public void BounceXSpeed()
+        private void BounceXSpeed()
         {
             speedx = -speedx;
         }
-        public void BounceYSpeed()
+        private  void BounceYSpeed()
         {
             speedy = -speedy;
+        }
+        public bool Exists
+        {
+            get
+            {
+                return exista;
+            }
+            set
+            {
+                exista =value;
+            }
+        }
+        public void  CheckBounds()
+        {
+           
         }
 
     }

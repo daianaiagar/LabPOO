@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading;
 namespace ConsoleApp1
 {
     internal class Game
@@ -16,7 +16,16 @@ namespace ConsoleApp1
 
         internal void Play()
         {
-            Console.WriteLine("Playing...");
+           while(true)
+            {
+                c.Step();
+                Thread.Sleep(1000);
+                if(true)
+                {
+                    //break;
+                }
+
+            }
         }
 
         internal void Status()
@@ -25,7 +34,8 @@ namespace ConsoleApp1
         }
 
         /// <summary>
-        /// 
+        /// To the windoooooooooooooooooow to the wall...
+        /// Enemies on these balls.
         /// </summary>
         /// <param name="v">Number of balls</param>
         /// <param name="v1">Width of canvas</param>
@@ -36,7 +46,9 @@ namespace ConsoleApp1
             this.width = v1;
             this.height = v2;
             c= new Canvas(10, width, height);
+           
             
         }
+
     }
 }

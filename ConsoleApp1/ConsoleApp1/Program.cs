@@ -10,9 +10,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Game g = new Game(25,1024,768);
-            
-            g.Play();
+              g.Play();
 
             g.Status();
         }

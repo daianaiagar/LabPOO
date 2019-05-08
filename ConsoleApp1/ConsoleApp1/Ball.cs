@@ -6,15 +6,13 @@ namespace ConsoleApp1
     {
         private int x, y;
         private int raza;
+        protected bool exista = true;
        // private int speedx, speedy;
-        public Ball(int x, int y, int raza)
+       public Ball(int x, int y, int raza)
         {
             this.x = x;
             this.y = y;
             this.raza = raza;
-            //this.speedx = speedx;
-           // this.speedy = speedy;
-
         }
      
         #region proprietati
@@ -88,6 +86,13 @@ namespace ConsoleApp1
             dist = Math.Sqrt((b2.X - X) * (b2.X - X) + (b2.Y - Y) * (b2.Y - Y));
             return (dist <= R + b2.R);
             
+        }
+        internal void Bang(BouncingBall item)
+        {
+            int r1, r2;
+            r1 = R;
+            r2 = item.R;
+            R =(int) Math.Sqrt(Math.Pow(r1, 2) + Math.Pow(r2, 2));
         }
 
     }
