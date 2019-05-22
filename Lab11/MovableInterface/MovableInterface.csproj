@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Movable.cs" />
+    <Compile Include="MovableCircle.cs" />
+    <Compile Include="MoveablePoint.cs" />
+    <Compile Include="MoveableRectangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
