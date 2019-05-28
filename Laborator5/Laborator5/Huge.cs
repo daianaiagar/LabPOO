@@ -179,9 +179,11 @@ namespace Laborator5
             int carry = 0, i, j, contor = 0;
             for (i = 0; i < Math.Min(left.Digits, right.Digits); i++)
             {
-                byte  dif =(byte)( left.Data[i] -(byte)( carry) - right.Data[i]);
+                if (right.Data[i] == 0)
+                    right.Data[i] = 9;
+                byte  dif =(byte)((10-right.Data[i]-carry+left.Data[i])%10);
                 sum[i] =Modul( dif);
-                if (dif < 0)
+                if (left.Data[i]-carry<right.Data[i])
                     carry = 1;
                 else
                      carry = 0;
