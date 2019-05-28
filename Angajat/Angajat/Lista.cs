@@ -93,7 +93,7 @@ namespace Angajat
         {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < lista.Count; i++)
-                sb.Append(lista[i].ToString()).Append("\n");
+                sb.Append(lista[i].ToString()).Append(sep);
             return sb.ToString();
         }
 
